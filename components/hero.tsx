@@ -33,7 +33,7 @@ export default function Hero() {
             <p className="text-muted-foreground mb-8" data-aos="fade-up" data-aos-delay="200">With its unique feature of floating notes, it allows you to create windows for note-taking that seamlessly integrate into your workflow.</p>
             <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center lg:space-x-2">
               <div data-aos="fade-up" data-aos-delay="400">
-              <Link href="#features" className={buttonVariants({ size: "lg" })}>Learn more</Link>
+              <Link href="#download" className={buttonVariants({ size: "lg" })}>Download</Link>
               </div>
               <div data-aos="fade-up" data-aos-delay="600">
             <Link href="#features" className={buttonVariants({  variant: "secondary",size: "lg" })}>Learn more</Link>
