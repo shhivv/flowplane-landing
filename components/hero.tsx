@@ -1,13 +1,11 @@
 'use client'
 
-import { useState } from 'react'
-import Image from 'next/image'
-import Modal from '@/components/utils/modal'
-import Cascade from '@/public/images/cascade.png'
+import Link from 'next/link'
+import Portal from './portal/Portal'
+import { Button } from './ui/button'
+import { buttonVariants } from "@/components/ui/button"
 
 export default function Hero() {
-
-  const [videoModalOpen, setVideoModalOpen] = useState<boolean>(false)
 
   return (
     <section>
@@ -31,14 +29,14 @@ export default function Hero() {
 
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <h1 className="h1 mb-4" data-aos="fade-up">Streamline your note-taking experience</h1>
-            <p className="text-xl text-gray-400 mb-8" data-aos="fade-up" data-aos-delay="200">With its unique feature of floating notes, it allows you to create windows for note-taking that seamlessly integrate into your workflow.</p>
-            <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
+            <h1 className="text-6xl mb-4 font-heading" data-aos="fade-up">Elevate Your Note-Taking Experience</h1>
+            <p className="text-muted-foreground mb-8" data-aos="fade-up" data-aos-delay="200">With its unique feature of floating notes, it allows you to create windows for note-taking that seamlessly integrate into your workflow.</p>
+            <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center lg:space-x-2">
               <div data-aos="fade-up" data-aos-delay="400">
-                <a className="btn text-white bg-red-600 hover:bg-red-700 rounded w-full mb-4 sm:w-auto sm:mb-0" href="https://i.shivs.me/r/flowplane_0.0.1_x64_en-US.msi">Download</a>
+              <Link href="#features" className={buttonVariants({ size: "lg" })}>Learn more</Link>
               </div>
               <div data-aos="fade-up" data-aos-delay="600">
-                <a className="btn text-white bg-gray-700 hover:bg-gray-800 rounded w-full sm:w-auto sm:ml-4" href="#features">Learn more</a>
+            <Link href="#features" className={buttonVariants({  variant: "secondary",size: "lg" })}>Learn more</Link>
               </div>
             </div>
           </div>
@@ -46,12 +44,7 @@ export default function Hero() {
           {/* Hero image */}
           <div>
             <div className="relative flex justify-center items-center" data-aos="fade-up" data-aos-delay="200">
-              <Image
-                src={Cascade}
-                width={1440}
-                alt="Hero"
-                priority
-              />
+              <Portal/>
             </div>
 
           </div>
