@@ -1,14 +1,15 @@
 import './css/style.css'
 
-import { Inter, Red_Hat_Display } from 'next/font/google'
+import { Poppins, Red_Hat_Display } from 'next/font/google'
 
 import Header from '@/components/Header'
 import { cn } from '@/lib/utils'
 
-const inter = Inter({
+const inter = Poppins({
   subsets: ['latin'],
   variable: '--font-sans',
   display: 'swap',
+  weight: ["400"]
 })
 
 const lora = Red_Hat_Display({

@@ -29,8 +29,8 @@ export function PortalInfo() {
 export default function Portal(){
   return <div className="w-5/6 h-[500px] overflow-hidden relative card flex items-center justify-center p-[2px] rounded-lg">
       <div className="bg" />
-      <div className="relative flex flex-col w-full h-full bg-neutral-950 rounded-lg">
-        <div className="overflow-y-hidden flex-1 p-8 font-sans text-muted-foreground" >
+      <div className="relative flex flex-col w-full h-full bg-[#111] rounded-lg">
+        <div className="overflow-y-hidden flex-1 p-8 font-sans" >
           <Suspense fallback={null}>
           <EditorComp markdown="What's on your mind today?
           *Start typing here...*"/>

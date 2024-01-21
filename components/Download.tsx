@@ -1,22 +1,33 @@
 import Link from "next/link"
-import { buttonVariants } from "./ui/button"
+import { Button } from "@/components/ui/button"
+import { FaWindows, FaLinux, FaApple } from 'react-icons/fa';
 
 export default function Download() {
+  let icon =  <FaWindows size={20}/>
+  let dld = "https://github.com/shhivv/flowplane/releases/download/app-v0.1.0/flowplane_0.1.0_x64_en-US.msi"
+
+  let userAgent = navigator.userAgent;
+
+  if(userAgent.includes("Macintosh"))
+  {
+    icon = <FaApple/>
+    dld = "https://github.com/shhivv/flowplane/releases/download/app-v0.1.0/flowplane_0.1.0_x64.dmg"
+  } else if(userAgent.includes("Linux")) {
+    icon = <FaLinux/>
+    dld = "https://github.com/shhivv/flowplane/releases/download/app-v0.1.0/flowplane_0.1.0_amd64.AppImage"
+  }
+
+  const onClick = () => {
+    setTimeout(() => {
+      window.location.href = "https://discord.gg/3dxcH7byTG"
+    }, 3000)
+  }
   return (
-    <section id="download">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="py-6 md:py-12 flex justify-around">
-        <div data-aos="fade-up" data-aos-delay="400">
-              <Link href="#download" className={buttonVariants({ size: "lg" })}>Download for Windows</Link>
-              </div>
-              <div data-aos="fade-up" data-aos-delay="400">
-              <Link href="#download" className={buttonVariants({ size: "lg" })}>Download for MacOS</Link>
-              </div>
-              <div data-aos="fade-up" data-aos-delay="400">
-              <Link href="#download" className={buttonVariants({ size: "lg" })}>Download for Linux</Link>
-              </div>
-        </div>
-      </div>
-    </section>
-  )
+    <Button size="lg" asChild>
+      <Link  className="flex items-center space-x-2" href={dld} onClick={onClick}>
+        {icon}
+        <h1>Download</h1>
+      </Link>
+    </Button>
+    )
 }
