@@ -4,17 +4,17 @@ import { FaWindows, FaLinux, FaApple } from 'react-icons/fa';
 
 export default function Download() {
   let icon =  <FaWindows size={20}/>
-  let dld = "https://github.com/shhivv/flowplane/releases/download/app-v0.1.0/flowplane_0.1.0_x64_en-US.msi"
+  let dld = "https://github.com/shhivv/flowplane/releases/download/app-v0.1.1/Flowplane_0.1.1_x64_en-US.msi"
 
   let userAgent = navigator.userAgent;
 
   if(userAgent.includes("Macintosh"))
   {
     icon = <FaApple/>
-    dld = "https://github.com/shhivv/flowplane/releases/download/app-v0.1.0/flowplane_0.1.0_x64.dmg"
+    dld = "https://github.com/shhivv/flowplane/releases/download/app-v0.1.1/Flowplane_0.1.1_x64.dmg"
   } else if(userAgent.includes("Linux")) {
     icon = <FaLinux/>
-    dld = "https://github.com/shhivv/flowplane/releases/download/app-v0.1.0/flowplane_0.1.0_amd64.AppImage"
+    dld = "https://github.com/shhivv/flowplane/releases/download/app-v0.1.1/Flowplane_0.1.1_amd64.AppImage"
   }
 
   const onClick = () => {
