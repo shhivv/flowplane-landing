@@ -1,11 +1,11 @@
 import './css/style.css'
 
-import { Poppins, Red_Hat_Display } from 'next/font/google'
+import { Nunito, Red_Hat_Display } from 'next/font/google'
 
 import Header from '@/components/Header'
 import { cn } from '@/lib/utils'
 
-const inter = Poppins({
+const inter = Nunito({
   subsets: ['latin'],
   variable: '--font-sans',
   display: 'swap',
@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn(
-          "min-h-screen dark bg-background font-sans antialiased",
+          "min-h-screen dark bg-neutral-900 font-sans antialiased",
           inter.variable, lora.variable
         )}>
         <div className="flex flex-col min-h-screen overflow-hidden">
