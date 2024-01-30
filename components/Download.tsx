@@ -17,7 +17,14 @@ export default function Download() {
     dld = "https://github.com/shhivv/flowplane/releases/download/app-v0.1.2/Flowplane_0.1.2_amd64.AppImage"
   }
 
-  const onClick = () => {
+  const onClick = async () => {
+    await fetch("/api/newDownload", {
+      method: "POST",
+      body: JSON.stringify({
+        "info" : userAgent
+      }),
+    })
+    
     setTimeout(() => {
       window.location.href = "https://discord.gg/3dxcH7byTG"
     }, 3000)
