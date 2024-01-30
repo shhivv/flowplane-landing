@@ -20,7 +20,7 @@ export default function Features() {
                 <path className="stroke-current text-primary-foreground/80" d="M43 42h-9M43 37h-9" strokeLinecap="square" strokeWidth="2" />
               </svg>
               <h4 className="text-xl mb-2 font-heading">Seamless Note-Taking</h4>
-              <p className="text-sm text-gray-400 text-center w-2/3">Effortlessly open floating notes with a simple shortcut, Ctrl + L, and immediately start jotting down your thoughts without disrupting your workflow.</p>
+              <p className="text-sm text-gray-400 text-center w-2/3">Effortlessly open floating notes with a simple shortcut, Ctrl + Q, and immediately start jotting down your thoughts without disrupting your workflow.</p>
             </div>
 
             {/* 2nd item */}

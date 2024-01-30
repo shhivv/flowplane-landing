@@ -29,7 +29,7 @@ export default function Hero() {
             Flow <span className='rounded-lg bg-gradient-to-r from-primary/80 to-primary/70 px-2'>unlocked</span>.
             </h1>
             <p className="text-muted-foreground mb-10 w-3/5 text-sm md:text-base" data-aos="fade-up" data-aos-delay="200">With floating notes, experience note-taking that seamlessly integrates into your workflow.</p>
-            <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center lg:space-x-2 space-y-2 lg:space-y-0">
+            <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center sm:space-x-2 space-y-2 sm:space-y-0 ">
               <div data-aos="fade-up" data-aos-delay="400">
               <DownloadButton/>
               </div>
