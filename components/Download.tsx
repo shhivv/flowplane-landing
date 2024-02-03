@@ -1,20 +1,21 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { FaWindows, FaLinux, FaApple } from 'react-icons/fa';
+import { APPLE, LINUX, WINDOWS } from "@/lib/downloadLinks";
 
 export default function Download() {
   let icon =  <FaWindows size={20}/>
-  let dld = "https://github.com/shhivv/flowplane/releases/download/app-v0.1.2/Flowplane_0.1.2_x64_en-US.msi"
+  let dld = WINDOWS;
 
   let userAgent = navigator.userAgent;
 
   if(userAgent.includes("Macintosh"))
   {
     icon = <FaApple/>
-    dld = "https://github.com/shhivv/flowplane/releases/download/app-v0.1.2/Flowplane_0.1.2_x64.dmg"
+    dld = APPLE;
   } else if(userAgent.includes("Linux")) {
     icon = <FaLinux/>
-    dld = "https://github.com/shhivv/flowplane/releases/download/app-v0.1.2/Flowplane_0.1.2_amd64.AppImage"
+    dld = LINUX;
   }
 
   const onClick = async () => {

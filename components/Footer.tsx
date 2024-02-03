@@ -1,9 +1,11 @@
 import React from 'react'
 import Link from 'next/link'
+import { Button } from './ui/button'
+import { APPLE, LINUX, WINDOWS } from '@/lib/downloadLinks'
 
 export default function Footer() {
   return (
-    <footer>
+    <footer id="footer">
       <div className="py-12 md:py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
@@ -18,7 +20,25 @@ export default function Footer() {
                   Flowplane
                 </Link>
               </div>
-              <div className="text-gray-400">Flowplane is a note-taking app designed to streamline your note-taking experience. With its unique feature of floating notes, it allows you to create windows for note-taking that seamlessly integrate into your workflow.</div>
+              <div className="text-gray-400 mt-4">Flowplane is a note-taking app designed to streamline your note-taking experience. With its unique feature of floating notes, it allows you to create windows for note-taking that seamlessly integrate into your workflow.</div>
+            </div>
+            <div className="md:col-span-4 lg:col-span-5">
+              <div className="mb-2">
+                {/* Logo */}
+                <Link href="#download" className="inline-block font-heading" aria-label="flowplane">
+                  Download
+                </Link>
+                <div className='flex flex-col items-start mt-2'>
+              <Button data-aos="fade-up"  variant="link" className="text-gray-400 p-0 text-xl" asChild><Link href={WINDOWS}>Windows</Link></Button>
+
+<Button data-aos="fade-up"  variant="link" className="text-gray-400 p-0 text-xl" asChild><Link href={APPLE}>Mac OS </Link></Button>
+
+<Button data-aos="fade-up"  variant="link" className="text-gray-400 p-0 text-xl" asChild><Link href={LINUX}>Linux</Link></Button>
+              </div>
+              </div>
+              
+              
+            
             </div>
 
            

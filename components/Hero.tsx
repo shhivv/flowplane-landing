@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import Portal from './portal/Portal'
-import { buttonVariants } from "@/components/ui/button"
+import { Button, buttonVariants } from "@/components/ui/button"
 import dynamic from 'next/dynamic'
 
 const DownloadButton = dynamic(() => import('./Download'), { ssr: false })
@@ -37,13 +37,13 @@ export default function Hero() {
             <Link href="#features" className={buttonVariants({  variant: "secondary",size: "lg" })}>Learn more</Link>
               </div>
             </div>
+            <Button data-aos="fade-up"  data-aos-delay="600" variant="link" className="text-neutral-400" asChild><Link href="#footer">Not your OS?</Link></Button>
           </div>
 
           <div>
             <div className="relative flex justify-center items-center" data-aos="flip-up" data-aos-delay="300" data-aos-duration="1500">
               <Portal/>
             </div>
-
           </div>
 
         </div>
