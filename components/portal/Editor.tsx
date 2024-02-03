@@ -13,18 +13,18 @@ import {
 import {FC} from 'react'
 
 interface EditorProps {
-  markdown: string
   editorRef?: React.MutableRefObject<MDXEditorMethods | null>
 }
 
 
 // Only import this to the next file
-const Editor: FC<EditorProps> = ({ markdown, editorRef }) => {
+const Editor: FC<EditorProps> = ({ editorRef }) => {
   return (
     <MDXEditor
     className="dark-theme dark-editor"
     contentEditableClassName="twindprose"
-    markdown={markdown}
+    markdown=''
+    placeholder="What's on your mind today? Start typing here..."
       plugins={[
         // Example Plugin Usage
         headingsPlugin(),

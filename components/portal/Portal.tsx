@@ -32,8 +32,7 @@ export default function Portal(){
       <div className="relative flex flex-col w-full h-full bg-card rounded-lg">
         <div className="overflow-y-hidden flex-1 p-8 font-sans" >
           <Suspense fallback={null}>
-          <EditorComp markdown="What's on your mind today?
-          *Start typing here...*"/>
+          <EditorComp/>
 
           </Suspense>
         </div>
