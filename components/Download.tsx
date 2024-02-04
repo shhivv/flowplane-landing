@@ -27,7 +27,7 @@ export default function Download() {
     })
     
     setTimeout(() => {
-      window.location.href = "https://discord.gg/3dxcH7byTG"
+      window.location.href = "https://discord.gg/uf3yzYbh3X"
     }, 3000)
   }
   return (
