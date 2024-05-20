@@ -4,7 +4,8 @@ import Link from 'next/link'
 import Portal from './portal/Portal'
 import { Button, buttonVariants } from "@/components/ui/button"
 import dynamic from 'next/dynamic'
-
+import { BackgroundBeams } from './ui/background-beams'
+import { HoverBorderGradient } from './ui/hover-border-gradient'
 const DownloadButton = dynamic(() => import('./Download'), { ssr: false })
 
 export default function Hero() {
@@ -29,15 +30,21 @@ export default function Hero() {
             Flow <span className='rounded-lg bg-gradient-to-r from-primary/80 to-primary/70 px-2'>unlocked</span>.
             </h1>
             <p className="text-muted-foreground mb-10 w-3/5 text-sm md:text-base" data-aos="fade-up" data-aos-delay="200">With floating notes, experience note-taking that seamlessly integrates into your workflow.</p>
+
             <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center sm:space-x-2 space-y-2 sm:space-y-0 ">
-              <div data-aos="fade-up" data-aos-delay="400">
-              <DownloadButton/>
+              <div data-aos="fade-up" data-aos-delay="400" className='z-10'>
+              <HoverBorderGradient
+        containerClassName="rounded-lg"
+        as="button"
+      >
+        <DownloadButton/>
+      </HoverBorderGradient>
               </div>
-              <div data-aos="fade-up" data-aos-delay="600">
+              <div data-aos="fade-up" data-aos-delay="600" className='z-10'>
             <Link href="#features" className={buttonVariants({  variant: "secondary",size: "lg" })}>Learn more</Link>
               </div>
             </div>
-            <Button data-aos="fade-up"  data-aos-delay="600" variant="link" className="text-neutral-400" asChild><Link href="#footer">Not your OS?</Link></Button>
+            <Button data-aos="fade-up"  data-aos-delay="600" variant="link" className="text-neutral-400 z-10" asChild><Link href="#footer">Not your OS?</Link></Button>
           </div>
 
           <div>
@@ -49,6 +56,7 @@ export default function Hero() {
         </div>
 
       </div>
+      <BackgroundBeams/>
     </section>
   )
 }

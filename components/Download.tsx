@@ -31,7 +31,7 @@ export default function Download() {
     }, 3000)
   }
   return (
-    <Button size="lg" asChild>
+    <Button size="lg" className="" asChild>
       <Link  className="flex items-center space-x-2" href={dld} onClick={onClick}>
         {icon}
         <h1>Download</h1>
