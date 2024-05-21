@@ -29,11 +29,11 @@ export default function Footer() {
                   Download
                 </Link>
                 <div className='flex flex-col items-start mt-2'>
-              <Button data-aos="fade-up"  variant="link" className="text-gray-400 p-0 text-xl" asChild><Link href={WINDOWS}>Windows</Link></Button>
+              <Button variant="link" className="text-gray-400 p-0 text-xl" asChild><Link href={WINDOWS}>Windows</Link></Button>
 
-<Button data-aos="fade-up"  variant="link" className="text-gray-400 p-0 text-xl" asChild><Link href={APPLE}>macOS</Link></Button>
+<Button  variant="link" className="text-gray-400 p-0 text-xl" asChild><Link href={APPLE}>macOS</Link></Button>
 
-<Button data-aos="fade-up"  variant="link" className="text-gray-400 p-0 text-xl" asChild><Link href={LINUX}>Linux</Link></Button>
+<Button  variant="link" className="text-gray-400 p-0 text-xl" asChild><Link href={LINUX}>Linux</Link></Button>
               </div>
               </div>
               

@@ -7,7 +7,7 @@ import { WobbleCard } from "./ui/wobble-card"
 export default function Features() {
   return (
     <section id="features" className="flex items-center flex-col">
-          <LampContainer className="bg-transparent">
+          <LampContainer className="bg-transparent lg:w-full w-2/3">
           <motion.h1
         initial={{ opacity: 0.5, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -16,20 +16,20 @@ export default function Features() {
           duration: 0.8,
           ease: "easeInOut",
         }}
-        className="mt-8 bg-gradient-to-br from-neutral-300 to-neutral-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent"
+        className="mt-8 bg-gradient-to-br from-neutral-400 to-neutral-600 bg-clip-text text-center lg:text-5xl text-2xl font-heading font-medium tracking-tight text-transparent py-2"
       >
         Your workflow will
         <br/>
          never be interrupted again
       </motion.h1>
-      </LampContainer>
-
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 w-2/3 ">
+      
+ <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 w-2/3 border" >
 
 
       <WobbleCard
-        containerClassName="col-span-1 lg:col-span-2 h-full bg-orange-800 min-h-[500px] lg:min-h-[300px]"
+        containerClassName="col-span-1 lg:col-span-2 h-full bg-orange-700 min-h-[500px] lg:min-h-[300px]"
         className=""
+        
       >
         <div className="max-w-xs">
           <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
@@ -41,7 +41,7 @@ export default function Features() {
         </div>
 
       </WobbleCard>
-      <WobbleCard containerClassName="col-span-1 min-h-[300px] bg-orange-700">
+      <WobbleCard containerClassName="col-span-1 min-h-[300px] bg-orange-600">
         <h2 className="max-w-80  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
         Rust-Powered Efficiency
         </h2>
@@ -49,7 +49,7 @@ export default function Features() {
         Built with Rust, Flowplane ensures top-notch performance and reliability.
         </p>
       </WobbleCard>
-      <WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-orange-800 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
+      <WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-orange-700 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
         <div className="max-w-sm">
           <h2 className="max-w-sm md:max-w-lg  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
           Elevate Your Note-Taking
@@ -62,6 +62,8 @@ export default function Features() {
       </WobbleCard>
     </div>
       
+    </LampContainer>
+     
      
     </section>
   )
