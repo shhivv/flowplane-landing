@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn(
-          "min-h-screen dark bg-neutral-900 font-sans antialiased",
+          "min-h-screen bg-neutral-200 font-sans antialiased",
           inter.variable, lora.variable
         )}>
         <div className="flex flex-col min-h-screen overflow-hidden">

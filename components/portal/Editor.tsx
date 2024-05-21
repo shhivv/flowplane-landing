@@ -21,7 +21,7 @@ interface EditorProps {
 const Editor: FC<EditorProps> = ({ editorRef }) => {
   return (
     <MDXEditor
-    className="dark-theme dark-editor"
+    className=""
     contentEditableClassName="twindprose"
     markdown=''
     placeholder="What's on your mind today? Start typing here..."

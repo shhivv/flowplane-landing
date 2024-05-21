@@ -1,59 +1,68 @@
+"use client"
+
+import { motion } from "framer-motion"
+import { LampContainer } from "./ui/lamp"
+import { WobbleCard } from "./ui/wobble-card"
+
 export default function Features() {
   return (
-    <section id="features">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="py-12 md:py-20">
+    <section id="features" className="flex items-center flex-col">
+          <LampContainer className="bg-transparent">
+          <motion.h1
+        initial={{ opacity: 0.5, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0.3,
+          duration: 0.8,
+          ease: "easeInOut",
+        }}
+        className="mt-8 bg-gradient-to-br from-neutral-300 to-neutral-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent"
+      >
+        Your workflow will
+        <br/>
+         never be interrupted again
+      </motion.h1>
+      </LampContainer>
 
-          {/* Section header */}
-          <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
-            <h2 className="text-3xl mb-4 font-semibold font-heading text-muted-foreground">Your workflow will never be interrupted again</h2>
-          </div>
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 w-2/3 ">
 
-          {/* Items */}
-          <div className="max-w-sm mx-auto grid gap-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-16 items-start md:max-w-2xl lg:max-w-none" data-aos-id-blocks>
 
-            {/* 1st item */}
-            <div className="relative flex flex-col items-center bg-card rounded-xl h-80 pt-12" data-aos="fade-up" data-aos-anchor="[data-aos-id-blocks]">
-              <svg className="w-16 h-16 mb-4" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                <rect className="fill-current text-primary" width="64" height="64" rx="32" />
-                <path className="stroke-current text-primary-foreground" d="M30 39.313l-4.18 2.197L27 34.628l-5-4.874 6.91-1.004L32 22.49l3.09 6.26L42 29.754l-3 2.924" strokeLinecap="square" strokeWidth="2" fill="none" fillRule="evenodd" />
-                <path className="stroke-current text-primary-foreground/80" d="M43 42h-9M43 37h-9" strokeLinecap="square" strokeWidth="2" />
-              </svg>
-              <h4 className="text-xl mb-2 font-heading">Seamless Note-Taking</h4>
-              <p className="text-sm text-gray-400 text-center w-2/3">Effortlessly open floating notes with a simple shortcut, Ctrl + Q, and immediately start jotting down your thoughts without disrupting your workflow.</p>
-            </div>
-
-            {/* 2nd item */}
-            <div className="relative flex flex-col items-center bg-card rounded-xl h-80 pt-12" data-aos="fade-up" data-aos-delay="100" data-aos-anchor="[data-aos-id-blocks]">
-              <svg className="w-16 h-16 mb-4" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                <circle className="fill-current text-primary" cx="32" cy="32" r="32" />
-                <path className="stroke-current text-primary-foreground" strokeWidth="2" strokeLinecap="square" d="M21 23h22v18H21z" fill="none" fillRule="evenodd" />
-                <path className="stroke-current text-primary-foreground/80" d="M26 28h12M26 32h12M26 36h5" strokeWidth="2" strokeLinecap="square" />
-              </svg>
-              <h4 className="text-xl mb-2 font-heading">Elevate Your Note-Taking</h4>
-              <p className="text-gray-400 text-sm text-center w-2/3">Enhance your productivity and creativity with Flowplane's innovative text editor, seamlessly integrated into the app's functionality.</p>
-            </div>
-
-            {/* 3rd item */}
-            <div className="relative flex flex-col items-center bg-card rounded-xl h-80 pt-12" data-aos="fade-up" data-aos-delay="200" data-aos-anchor="[data-aos-id-blocks]">
-              <svg className="w-16 h-16 mb-4" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                <rect className="fill-current text-primary" width="64" height="64" rx="32" />
-                <g transform="translate(21 21)" strokeLinecap="square" strokeWidth="2" fill="none" fillRule="evenodd">
-                  <ellipse className="stroke-current text-primary-foreground/80" cx="11" cy="11" rx="5.5" ry="11" />
-                  <path className="stroke-current text-primary-foreground" d="M11 0v22M0 11h22" />
-                  <circle className="stroke-current text-primary-foreground" cx="11" cy="11" r="11" />
-                </g>
-              </svg>
-              <h4 className="text-xl mb-2 font-heading">Rust-Powered Efficiency</h4>
-              <p className=" text-gray-400 text-center text-sm w-2/3">Built with Rust, Flowplane ensures top-notch performance and reliability. </p>
-            </div>
-
-            
-
-          </div>
-
+      <WobbleCard
+        containerClassName="col-span-1 lg:col-span-2 h-full bg-orange-800 min-h-[500px] lg:min-h-[300px]"
+        className=""
+      >
+        <div className="max-w-xs">
+          <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
+          Seamless Note-Taking
+          </h2>
+          <p className="mt-4 text-left  text-base/6 text-neutral-200">
+          Effortlessly open floating notes with a simple shortcut, Ctrl + Q, and immediately start jotting down your thoughts without disrupting your workflow.
+          </p>
         </div>
-      </div>
+
+      </WobbleCard>
+      <WobbleCard containerClassName="col-span-1 min-h-[300px] bg-orange-700">
+        <h2 className="max-w-80  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
+        Rust-Powered Efficiency
+        </h2>
+        <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
+        Built with Rust, Flowplane ensures top-notch performance and reliability.
+        </p>
+      </WobbleCard>
+      <WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-orange-800 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
+        <div className="max-w-sm">
+          <h2 className="max-w-sm md:max-w-lg  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
+          Elevate Your Note-Taking
+          </h2>
+          <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
+          Enhance your productivity and creativity with Flowplane's innovative text editor, seamlessly integrated into the app's functionality.
+          </p>
+        </div>
+        
+      </WobbleCard>
+    </div>
+      
+     
     </section>
   )
 }

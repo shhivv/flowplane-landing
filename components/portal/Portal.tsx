@@ -29,7 +29,7 @@ export function PortalInfo() {
 export default function Portal(){
   return <div className="w-5/6 h-[500px] overflow-hidden relative card flex items-center justify-center p-[2px] rounded-lg">
       <div className="bg" />
-      <div className="relative flex flex-col w-full h-full bg-card rounded-lg">
+      <div className="relative flex flex-col w-full h-full bg-neutral-200 rounded-lg">
         <div className="overflow-y-hidden flex-1 p-8 font-sans" >
           <Suspense fallback={null}>
           <EditorComp/>
